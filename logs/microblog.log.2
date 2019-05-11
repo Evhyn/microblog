@@ -1,0 +1,124 @@
+2019-05-10 19:45:11,943 ERROR: Exception on /search [GET] [in c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\sql\elements.py", line 708, in comparator
+    comparator_factory = self.type.comparator_factory
+AttributeError: 'NoneType' object has no attribute 'comparator_factory'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jager\Flask\microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Jager\Flask\microblog\app\models.py", line 22, in search
+    db.case(when, value=cls.id)), total
+  File "<string>", line 2, in order_by
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\orm\base.py", line 220, in generate
+    fn(self, *args[1:], **kw)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\orm\query.py", line 1817, in order_by
+    criterion = self._adapt_col_list(criterion)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\orm\query.py", line 315, in _adapt_col_list
+    for o in cols
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\orm\query.py", line 315, in <listcomp>
+    for o in cols
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\sql\elements.py", line 4425, in _literal_as_label_reference
+    elif hasattr(element, "__clause_element__"):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\sql\elements.py", line 719, in __getattr__
+    return getattr(self.comparator, key)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 855, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\sqlalchemy\sql\elements.py", line 712, in comparator
+    "is not a TypeEngine class or object" % self.type
+TypeError: Object None associated with '.type' attribute is not a TypeEngine class or object
+2019-05-10 19:46:00,124 ERROR: Exception on /search [GET] [in c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jager\Flask\microblog\app\main\routes.py", line 145, in search
+    print('Total: '+total)
+TypeError: can only concatenate str (not "dict") to str
+2019-05-10 19:46:55,025 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 19:47:02,298 ERROR: Exception on /search [GET] [in c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jager\Flask\microblog\app\main\routes.py", line 148, in search
+    if total > page * current_app.config['POSTS_PER_PAGE'] else None
+TypeError: '>' not supported between instances of 'dict' and 'int'
+2019-05-10 19:49:44,523 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 19:58:07,287 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 20:01:42,293 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 20:11:01,702 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 23:25:11,496 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 23:26:42,678 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
+2019-05-10 23:27:08,613 ERROR: Exception on /online3d [GET] [in c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Jager\Flask\microblog\app\main\routes.py", line 155, in online3d
+    return render_template('Online3DViewer-master/embeddable/fullsceen.html')
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\jager\flask\microblog\myenv\lib\site-packages\flask\templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: Online3DViewer-master/embeddable/fullsceen.html
+2019-05-10 23:30:31,411 INFO: Microblog startup [in C:\Users\Jager\Flask\microblog\app\__init__.py:77]
